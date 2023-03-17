@@ -1,4 +1,4 @@
-# Assignment06
+# Assignment 6
 
 ## The Employee Management System (Add, View, and Delete Employees)
 
