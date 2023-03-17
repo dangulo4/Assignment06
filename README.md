@@ -8,6 +8,8 @@ In this assignment you will combine elements of the M6 Assignment with what you 
 
 The UI has been created for you using Bootstrap. You will not need to touch the HTML for this assignment.
 
+![M71](assets/M7screenshot1.JPG,'M71')
+
 ## Adding an Employee
 
 Similar to the M6 Assignment, you will want to capture the values of the Add Employee form. These values will then be displayed within the table to the right, in the “Employees” pane. The example below shows what this will look like.
@@ -16,6 +18,8 @@ Similar to the M6 Assignment, you will want to capture the values of the Add Emp
 
 - Upon submission, the form should completely clear itself of the entered values.
 - Upon submission, the user’s cursor should immediately return to the Employee ID field.
+
+![M72](assets/M7screenshot2.JPG,'M72')
 
 ## Viewing Employees
 
