@@ -50,8 +50,8 @@ form.addEventListener('submit', (e) => {
   row.appendChild(deleteBtn);
   // RESET THE FORM
   form.reset();
-
   // SET FOCUS BACK TO THE ID TEXT BOX
+  document.querySelector('input').focus();
   // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
   count = document.querySelector('table').rows.length - 1;
   console.log(count);
