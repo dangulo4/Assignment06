@@ -3,7 +3,6 @@ let form = document.querySelector('form');
 let table = document.querySelector('table');
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 let count = 0;
-console.log(count);
 // CHECK TO SEE IF THERE ARE ANY EMPLOYEE RECORDS AND DISPLAY TOGGLE MESSAGE TO USER
 window.addEventListener('load', (e) => {
   checkEmployees();
@@ -53,11 +52,24 @@ form.addEventListener('submit', (e) => {
   document.querySelector('input').focus();
   // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
   count = document.querySelector('table').rows.length - 1;
-  console.log(count);
   checkEmployees();
 });
 
-// DELETE EMPLOYEE
+// DELETE EMPLOYEE FROM TABLE
+table.addEventListener('click', (e) => {
+  if (
+    confirm(
+      `You are deleting Employee ID: ${e.target.parentElement.children[0].innerHTML} - ${e.target.parentElement.children[1].innerHTML}`
+    )
+  ) {
+    console.log(e.target.parentElement.children[1].innerHTML);
+    // GET THE ROW INDEX FROM TABLE
+    table.deleteRow(e.target.parentNode.rowIndex);
+  }
+  // UPATE COUNTER TO UPDATE
+  count = count - 1;
+  checkEmployees();
+});
 
 // FUNCTION TO COUNT RECORDS WHICH WILL SHOW OR HIDE "NO ROWS" ALERT
 function checkEmployees() {
