@@ -1,11 +1,10 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
 let form = document.querySelector('form');
 let table = document.querySelector('table');
-
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 let count = 0;
-// let count = document.querySelector('td').childNodes;
 console.log(count);
+// CHECK TO SEE IF THERE ARE ANY EMPLOYEE RECORDS AND DISPLAY TOGGLE MESSAGE TO USER
 window.addEventListener('load', (e) => {
   checkEmployees();
 });
@@ -60,9 +59,11 @@ form.addEventListener('submit', (e) => {
 
 // DELETE EMPLOYEE
 
-// FUNCTION TO SHOW OR HIDE "NO ROWS" ALERT
+// FUNCTION TO COUNT RECORDS WHICH WILL SHOW OR HIDE "NO ROWS" ALERT
 function checkEmployees() {
   count == 0
     ? document.querySelector('span').classList.add('show')
     : document.querySelector('span').classList.remove('show');
+  empCount = document.getElementById('empCount');
+  empCount.innerHTML = `(${count})`;
 }
